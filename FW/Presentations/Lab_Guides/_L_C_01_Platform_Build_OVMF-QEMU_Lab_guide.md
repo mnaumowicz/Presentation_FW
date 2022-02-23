@@ -71,7 +71,7 @@ Instructions from: tianocore wiki Ubuntu_1610
 
 The following need to be accessible for building Edk2, From the terminal prompt (Cnt-Alt-T):
 ```
-bash$ sudo apt-get install build-essential uuid-dev iasl git gcc-5 nasm  python3-distutils
+bash$ sudo apt-get install build-essential uuid-dev iasl git gcc-5 nasm python3-distutils-extra
 
 
 build-essential - Informational list of build-essential packages
