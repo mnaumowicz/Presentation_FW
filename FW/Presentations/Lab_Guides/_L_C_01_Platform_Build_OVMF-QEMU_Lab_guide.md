@@ -120,7 +120,7 @@ Qemu – Emulation with Intel architecture with UEFI Shell
 Create a run-ovmf directory under the home directory
 ```
 bash$ cd ~
-bash$ mkdir ~run-ovmf
+bash$ mkdir run-ovmf
 bash$ cd run-ovmf
 ```
 
@@ -135,7 +135,7 @@ bash$ gedit RunQemu.sh
 ```
 Type in the following for the file RunQemu.sh
 ```
-qemu-system-x86_64 -pflash bios.bin -hda fat:rw:hda-contents -net none     -debugcon file:debug.log -global isa-debugcon.iobase=0x402 
+qemu-system-x86_64 -pflash bios.bin -hda fat:rw:hda-contents -net none -debugcon file:debug.log -global isa-debugcon.iobase=0x402
 ```
 Save and Exit
 
@@ -150,6 +150,7 @@ Open a terminal prompt and create a source working directory
 bash$ mkdir ~/src 
 bash$ cd ~/src
 bash$ mkdir edk2-ws 
+bash$ cd edk2-ws 
 ```
 
 Note:  if behind a firewall, set PROXYS FIRST
@@ -169,7 +170,7 @@ bash$ git clone https://github.com/tianocore/edk2-libc.git
 Download the Submodules and Checkout the Lab Branch
 ```
 bash$  cd edk2
-bash$ submodule update --init
+bash$  git submodule update --init
 bash$  cd ..
 ```
 ---
@@ -233,7 +234,7 @@ From the downloaded Lab_Material_FW folder,<br> <b>copy</b> and <b>paste</b> fol
  Export work space & platform path
  
 ``` 
-bash$ cd ~src/edk2-ws
+bash$ cd ~/src/edk2-ws
 bash$ export WORKSPACE=$PWD
 bash$ export PACKAGES_PATH=$WORKSPACE/edk2:$WORKSPACE/edk2-libc
 ```
