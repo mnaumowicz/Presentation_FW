@@ -221,7 +221,7 @@ Extract the Downloaded Lab_Material_FW.zip to $HOME (this will create a director
  - Copy edk2-ws 
 
 
-From the downloaded Lab_Material_FW folder,<br> <b>copy</b> and <b>paste</b> folder `"../edk2-ws"` to `"~src"`
+From the downloaded Lab_Material_FW folder,<br> <b>copy</b> and <b>paste</b> folder `"../edk2-ws"` to `"~/src"`
 
 
 <i>Note:</i> Overwrite existing files and directories
