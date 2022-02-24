@@ -71,7 +71,7 @@ Instructions from: tianocore wiki Ubuntu_1610
 
 The following need to be accessible for building Edk2, From the terminal prompt (Cnt-Alt-T):
 ```
-bash$ sudo apt-get install build-essential uuid-dev iasl git gcc-5 nasm  python3-distutils
+bash$ sudo apt-get install build-essential uuid-dev iasl git gcc-5 nasm python3-distutils-extra
 
 
 build-essential - Informational list of build-essential packages
@@ -120,7 +120,7 @@ Qemu – Emulation with Intel architecture with UEFI Shell
 Create a run-ovmf directory under the home directory
 ```
 bash$ cd ~
-bash$ mkdir ~run-ovmf
+bash$ mkdir run-ovmf
 bash$ cd run-ovmf
 ```
 
@@ -135,7 +135,7 @@ bash$ gedit RunQemu.sh
 ```
 Type in the following for the file RunQemu.sh
 ```
-qemu-system-x86_64 -pflash bios.bin -hda fat:rw:hda-contents -net none     -debugcon file:debug.log -global isa-debugcon.iobase=0x402 
+qemu-system-x86_64 -pflash bios.bin -hda fat:rw:hda-contents -net none -debugcon file:debug.log -global isa-debugcon.iobase=0x402
 ```
 Save and Exit
 
@@ -150,6 +150,7 @@ Open a terminal prompt and create a source working directory
 bash$ mkdir ~/src 
 bash$ cd ~/src
 bash$ mkdir edk2-ws 
+bash$ cd edk2-ws 
 ```
 
 Note:  if behind a firewall, set PROXYS FIRST
@@ -169,7 +170,7 @@ bash$ git clone https://github.com/tianocore/edk2-libc.git
 Download the Submodules and Checkout the Lab Branch
 ```
 bash$  cd edk2
-bash$ submodule update --init
+bash$  git submodule update --init
 bash$  cd ..
 ```
 ---
@@ -233,7 +234,7 @@ From the downloaded Lab_Material_FW folder,<br> <b>copy</b> and <b>paste</b> fol
  Export work space & platform path
  
 ``` 
-bash$ cd ~src/edk2-ws
+bash$ cd ~/src/edk2-ws
 bash$ export WORKSPACE=$PWD
 bash$ export PACKAGES_PATH=$WORKSPACE/edk2:$WORKSPACE/edk2-libc
 ```
@@ -339,10 +340,85 @@ bash$ . RunQemu.sh
 
 QEMU will open to the UEFI SHell prompt
 
+
+
+---
+## Slide 18  Show the UEFI Boot Variables
+
+At the Shell Prompt:
+```
+Shell> FS0:
+Shell> BCFG Boot Dump
+```
+Note see the list of Boot000X options printed to the console
+
+---
+## Slide 19  Use the Dmpstore to Show the Boot Order
+
+At the Shell Prompt:
+
+```
+FS0: > Dmpstore BootOrder
+```
+---
+## Slide 20  Use the BCFG to Move a boot item 
+
+Use BCFG to Move the 5th boot item too 1st location.
+
+Then verify using the `dmpstore`
+
+(Hint: use `BCFG -? -b` for help menu)
+
+The dmpstore output should look like:
+
+```
+Variable NV+RT+BS 'EFIGlobalVariable:BootOrder' DataSize = 0x0C
+  00000000: 00 00 05 00 01 00 02 00-03 00 04 00              *............*
+```
+
+Solution:
+```
+bcfg boot mv 05 00
+```
+
+---
+## Slide 21  Use the BCFG to Add a boot item  
+
+Copy the old EFI Shell from  
+~/src/edk2-ws/edk2/ShellPkg/OldShell/Shell_FullX64.efi to the run-ovmf directory  ~/run-ovmf/hda-contents
+
+```
+bash$ cp ~/src/edk2-ws/edk2/ShellPkg/OldShell/Shell_FullX64.efi  ~/run-ovmf/hda-contents
+```
+
+Use BCFG to Add  a 06 entry for a new boot option with  `Shell_FullX64.efi`
+
+Then verify using the `BCFG Boot Dump`
+
+Hint: make sure Shell_FullX64.efi is in the FS0: directory by doing: 
+```
+FS0:> Dir 
+```
+After the bcfg add, The output should look like
+```
+. . .
+Option: 06. Variable: Boot0006   
+  Desc    - Old EFI Shell 1.0
+  DevPath - VenHw(5CF32E0B-8EDF-2E44-9CDA-93205E99EC1C,00000000)/VenHw(964E5B22-6459-11D2-8E39-00A0C969723B,00000000)/\Shell_FullX64.efi
+  Optional- N
+```
+
 To exit, Close QEMU
 
+Solution:
+```
+bcfg boot add 06 Shell_fullX64.efi "Old EFI Shell 1.0"
+```
+
+
+
 ---  
-## Slide 18  Summary
+## Slide 22  Summary
 ### Summary <br>
 
 - 
@@ -350,12 +426,12 @@ To exit, Close QEMU
 - Run Ovmf using Qemu
 
 ---
-## Slide 19  Questions
+## Slide 23  Questions
 <br>
 Questions
 
 ---
-## Slide 20  return to main
+## Slide 24  return to main
 <b>Return to Main Training Page</b>
 <br>
 <br>
@@ -367,13 +443,13 @@ Return to Training Table of contents for next presentation <a href="https://gith
 
 
 ---
-## Slide 21  Logo Slide
+## Slide 25  Logo Slide
 <br><br><br>
 
 
 
 ---
-## Slide 22  Acknowledgements
+## Slide 26  Acknowledgements
 #### Acknowledgements
 
 ```c++
