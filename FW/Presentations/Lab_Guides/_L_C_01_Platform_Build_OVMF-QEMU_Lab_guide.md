@@ -80,7 +80,7 @@ iasl - Intel ASL compiler/decompiler (also provided by acpica-tools)
 git - support for git revision control system
 gcc-5 - GNU C compiler (v5.4.0 as of Ubuntu 16.04 LTS)
 nasm - General-purpose x86 assembler 
-python3 - distutils - distutils module from the Python standard library
+python3 - distutils - extra - distutils module from the Python standard library
 
 
 bash$ sudo apt-get install qemu
