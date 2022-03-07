@@ -273,7 +273,7 @@ Open Virtual Machine Firmware - Build with edk2
 
 Open Terminal prompt & Cd to work space directory 
 ```
-bash$ cd ~/src/edk-ws/edk2
+bash$ cd ~/src/edk2-ws/edk2
 bash$ . edksetup.sh
 
 ```
