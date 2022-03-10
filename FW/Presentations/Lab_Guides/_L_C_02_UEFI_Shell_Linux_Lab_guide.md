@@ -354,7 +354,7 @@ Shell>
 
 **Pick a location from the MemMap command on Previous slides
 <font color="#FFFFff"><span style="background-color: #000000"><br>
-&nbsp;&nbsp;<font face="Consolas"> BS_Data    00000117FC9F5000-00000117FCA1CFFF 0000000000000028 000000000000000F</font> &nbsp;&nbsp; </span></font>
+&nbsp;&nbsp;<font face="Consolas"> BS_Data    0000000006567000-000000000656CFFF 0000000000000006 000000000000000F</font> &nbsp;&nbsp; </span></font>
 
 MM in can display / modify any location 
 
