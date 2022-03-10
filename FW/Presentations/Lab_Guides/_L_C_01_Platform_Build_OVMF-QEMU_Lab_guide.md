@@ -363,7 +363,7 @@ FS0: > Dmpstore BootOrder
 ---
 ## Slide 20  Use the BCFG to Move a boot item 
 
-Use BCFG to Move the 5th boot item too 1st location.
+Use BCFG to Move the 4th boot item too 1st location.
 
 Then verify using the `dmpstore`
 
@@ -373,12 +373,12 @@ The dmpstore output should look like:
 
 ```
 Variable NV+RT+BS 'EFIGlobalVariable:BootOrder' DataSize = 0x0C
-  00000000: 00 00 05 00 01 00 02 00-03 00 04 00              *............*
+  00000000: 00 00 01 00 02 00 03 00              *.....*
 ```
 
 Solution:
 ```
-bcfg boot mv 05 00
+bcfg boot mv 03 00
 ```
 
 ---
@@ -391,7 +391,7 @@ Copy the old EFI Shell from
 bash$ cp ~/src/edk2-ws/edk2/ShellPkg/OldShell/Shell_FullX64.efi  ~/run-ovmf/hda-contents
 ```
 
-Use BCFG to Add  a 06 entry for a new boot option with  `Shell_FullX64.efi`
+Use BCFG to Add  a 04 entry for a new boot option with  `Shell_FullX64.efi`
 
 Then verify using the `BCFG Boot Dump`
 
@@ -402,7 +402,7 @@ FS0:> Dir
 After the bcfg add, The output should look like
 ```
 . . .
-Option: 06. Variable: Boot0006   
+Option: 04. Variable: Boot0006   
   Desc    - Old EFI Shell 1.0
   DevPath - VenHw(5CF32E0B-8EDF-2E44-9CDA-93205E99EC1C,00000000)/VenHw(964E5B22-6459-11D2-8E39-00A0C969723B,00000000)/\Shell_FullX64.efi
   Optional- N
@@ -412,7 +412,7 @@ To exit, Close QEMU
 
 Solution:
 ```
-bcfg boot add 06 Shell_fullX64.efi "Old EFI Shell 1.0"
+bcfg boot add 04 Shell_fullX64.efi "Old EFI Shell 1.0"
 ```
 
 
