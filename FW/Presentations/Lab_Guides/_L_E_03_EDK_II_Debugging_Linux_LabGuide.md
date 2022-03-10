@@ -78,7 +78,7 @@ Skip to next slide if Lab Writing UEFI App Lab</a> completed - <a href="https://
 - Perform Lab Setup from previous Labs  <a href="https://github.com/tianocore-training/Presentation_FW/blob/main/FW/Presentations/Lab_Guides/_L_C_01_Platform_Build_OVMF-QEMU_Lab_guide.md">LabGuide</a>  
 - Create a Directory under the workspace `~/src/edk2-ws/edk2 : "SampleApp"`
 - Copy contents of `~/FW/LabSampleCode/SampleAppDebug to ~src/edk2-ws/edk2/SampleApp`
-- Open `~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc`
+- Open `~/src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc`
 - Add the following to the `[Components]` section: 
 
 ```
