@@ -385,10 +385,10 @@ bcfg boot mv 03 00
 ## Slide 21  Use the BCFG to Add a boot item  
 
 Copy the old EFI Shell from  
-~/src/edk2-ws/edk2/ShellPkg/OldShell/Shell_FullX64.efi to the run-ovmf directory  ~/run-ovmf/hda-contents
+~/src/edk2-ws/ShellPkg/OldShell/Shell_FullX64.efi to the run-ovmf directory  ~/run-ovmf/hda-contents
 
 ```
-bash$ cp ~/src/edk2-ws/edk2/ShellPkg/OldShell/Shell_FullX64.efi  ~/run-ovmf/hda-contents
+bash$ cp ~/src/edk2-ws/ShellPkg/OldShell/Shell_FullX64.efi  ~/run-ovmf/hda-contents
 ```
 
 Use BCFG to Add  a 04 entry for a new boot option with  `Shell_FullX64.efi`
