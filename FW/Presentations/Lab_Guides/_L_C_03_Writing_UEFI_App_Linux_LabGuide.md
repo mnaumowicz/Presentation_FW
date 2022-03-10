@@ -158,7 +158,7 @@ Note:
 Copy the HelloWorld.efi to the ~run-ovmf/hda-contents directory
 ```
   bash$ cd ~/run-ovmf/hda-contents
-  bash$ cp ~/src/edk2-ws/Build/OvmfX64/DEBUG_GCC5/X64/HelloWorld.efi
+  bash$ cp ~/src/edk2-ws/Build/OvmfX64/DEBUG_GCC5/X64/HelloWorld.efi .
 ```
 CD to the run-ovmf directory and run Qemu with the RunQemu.sh shell
  ```
