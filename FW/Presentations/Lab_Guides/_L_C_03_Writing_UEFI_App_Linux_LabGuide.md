@@ -279,7 +279,7 @@ Note:
 6. Exit QEMU
 
 - How can we change the string of the HelloWorld application?
-- Also see  ~src/edk2-ws/edk2/MdeModulePkg/MdeModulePkg.Dec
+- Also see  ~/src/edk2-ws/edk2/MdeModulePkg/MdeModulePkg.Dec
 
 
 
@@ -760,9 +760,9 @@ Between each build
 See class files for the solution 
 
 - . . .FW/LabSampleCode/LessonB.2
-- Copy the .inf and .c files to  ~src/edk2-ws/edk2/SampleApp
+- Copy the .inf and .c files to  ~/src/edk2-ws/edk2/SampleApp
 - Search sample DSC for reference to SampleApp.inf and add this line to your workspace DSC file: <br>
-~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc
+~/src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc
 
 Invoke " build" again and check the solution
 
@@ -1358,7 +1358,7 @@ Copy and paste directory
 ```
 	   
 Copy and paste directory ~../FW/LabSampleCode/SampleCApp to 
-        ~src/edk2-libc/AppPkg/Applications/SampleCApp 
+        ~/src/edk2-libc/AppPkg/Applications/SampleCApp 
 	   
 ```
 
@@ -1420,7 +1420,7 @@ main (
 **Optional** 
 ### <b>Lab 6 : Update AppPkg.dsc </b> 
 
-Edit the ~src/edk2-ws/edk-libc/AppPkg/AppPkg.dsc and add `SampleCApp.inf` at the end of the components section
+Edit the ~/src/edk2-ws/edk-libc/AppPkg/AppPkg.dsc and add `SampleCApp.inf` at the end of the components section
 - (hint: search for "#### Sample Applications")
 - `AppPkg/Applications/SampleCApp/SampleCApp.inf` 
 <br>
@@ -1447,7 +1447,7 @@ Edit the ~src/edk2-ws/edk-libc/AppPkg/AppPkg.dsc and add `SampleCApp.inf` at the
 
 Build the AppPkg
 ```
-bash$ cd ~src/edk2-ws/edk2
+bash$ cd ~/src/edk2-ws/edk2
 bash$ build -p AppPkg/AppPkg.dsc –m AppPkg/Applications/SampleCApp/SampleCApp.inf
 ```
 Copy the built application to the run OVMF hda-contents directory
@@ -1585,7 +1585,7 @@ After compile notice the size of the final .EFI file is about 2K larger than the
 
 Build the AppPkg
 ```
-bash$ cd ~src/edk2-ws/edk2
+bash$ cd ~/src/edk2-ws/edk2
 bash$ build -p AppPkg/AppPkg.dsc –m AppPkg/Applications/SampleCApp/SampleCApp.inf
 ```
 Copy the built application to the run OVMF hda-contents directory
