@@ -233,11 +233,10 @@ Source from Helloworld.c
 
 Note:
 
-- look in file: `C:\fw\edk2\MdeModulePkg\MdeModulePkg.Dec` 
- 
+- look in file: ~/src/edk2-ws/edk2/MdeModulePkg/MdeModulePkg.dec  
 - This PCD defines the print string.
--  This PCD is a sample to explain String typed PCD usage.
--  `gEfiMdeModulePkgTokenSpaceGuid.PcdHelloWorldPrintString|L"UEFI Hello World!\n"|VOID*|0x40000004`
+- This PCD is a sample to explain String typed PCD usage.
+- `gEfiMdeModulePkgTokenSpaceGuid.PcdHelloWorldPrintString|L"UEFI Hello World!\n"|VOID*|0x40000004`
 
 Solution:
 1. Edit the file ~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc
