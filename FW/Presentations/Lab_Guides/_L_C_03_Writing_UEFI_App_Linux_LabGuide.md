@@ -239,7 +239,7 @@ Note:
 - `gEfiMdeModulePkgTokenSpaceGuid.PcdHelloWorldPrintString|L"UEFI Hello World!\n"|VOID*|0x40000004`
 
 Solution:
-1. Edit the file ~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc
+1. Edit the file ~/src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc
   - After the section [PcdsFixedAtBuild], add the new line :  
   - `[PcdsFixedAtBuild]`
   - `gEfiMdeModulePkgTokenSpaceGuid.PcdHelloWorldPrintTimes|3`
