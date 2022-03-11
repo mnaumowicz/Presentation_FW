@@ -252,7 +252,7 @@ bash$ build –D ADD_SHELL_STRING
 3. Copy  Helloworld.efi 	 
 ```
 bash$ cd ~/run-ovmf/hda-contents
-bash$ cp ~/src/Build/OvmfX64/DEBUG_GCC5/X64/HelloWorld.efi .
+bash$ cp ~/src/edk2-ws/Build/OvmfX64/DEBUG_GCC5/X64/HelloWorld.efi .
 ```
 
 ---
