@@ -245,7 +245,7 @@ Solution:
   - `gEfiMdeModulePkgTokenSpaceGuid.PcdHelloWorldPrintTimes|3`
 
 
-2. Re-Build – Cd to ~/src/edk2-ws/edk2~ dir 
+2. Re-Build – Cd to ~/src/edk2-ws/edk2 dir 
 ```
 bash$ build –D ADD_SHELL_STRING
 ```
