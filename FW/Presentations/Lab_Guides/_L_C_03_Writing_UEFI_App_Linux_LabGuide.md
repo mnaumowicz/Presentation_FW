@@ -689,7 +689,7 @@ Copy  OVMF.fd  to run-ovmf
 
 ```
  bash$ cd ~/run-ovmf/
- bash$ cp ~/src/Build/OvmfX64/DEBUG_GCC5/FV/OVMF.fd bios.bin
+ bash$ cp ~/src/edk2-ws/Build/OvmfX64/DEBUG_GCC5/FV/OVMF.fd bios.bin
 ```
 
 Test by Invoking Qemu
