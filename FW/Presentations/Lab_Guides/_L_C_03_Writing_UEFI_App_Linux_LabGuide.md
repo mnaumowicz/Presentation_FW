@@ -713,7 +713,7 @@ Edit the file `~/src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc`<br>
 Change the `ADD_SHELL_STRING  = FALSE` to `TRUE`  
 
 
-``shell
+```shell
 bash$ cd  ~/src/edk2-ws/edk2 
 bash$ build 
 ```
