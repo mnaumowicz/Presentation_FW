@@ -153,9 +153,7 @@ bash$ gedit RunQemu.sh
 ```
 Add to the RunQemu.sh file
 ```
-qemu-system-x86_64 -pflash bios.bin -hda fat:rw:hda-contents 
--net none -debugcon file:debug.log 
--global isa-debugcon.iobase=0x402  -serial file:serial.log
+qemu-system-x86_64 -pflash bios.bin -hda fat:rw:hda-contents -net none -debugcon file:debug.log -global isa-debugcon.iobase=0x402 -serial file:serial.log
 ```
 
 Note: See contents of ~/FW/edk2Linux/SRunQemu.sh 
