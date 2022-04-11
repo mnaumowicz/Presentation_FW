@@ -416,7 +416,7 @@ Edit the Linux shell script to run the QEMU from the run-ovmf directory and add 
 ```
 add the "-s" to the following to RunQemu.sh (Note, this is for the IA32 and the –serial is not there.)
 ```
-  qemu-system-i386  -s  -pflash bios.bin -hda fat:rw:hda-contents -net none -debugcon file:debug.log -global isa-debugcon.iobase=0x402
+  qemu-system-i386 -s -pflash bios.bin -hda fat:rw:hda-contents -net none -debugcon file:debug.log -global isa-debugcon.iobase=0x402
 ```
 
 Save and Exit
